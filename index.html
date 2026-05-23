@@ -5,117 +5,270 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sauman Biswas</title>
   <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
+      background: #020617;
       color: #e5e7eb;
       line-height: 1.6;
     }
-    header {
-      padding: 70px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      border-bottom: 1px solid #1e293b;
     }
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      color: #38bdf8;
-      margin-top: 40px;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 18px;
-      background: #38bdf8;
-      color: #0f172a;
+
+    nav a {
+      color: #e5e7eb;
       text-decoration: none;
-      border-radius: 8px;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .logo {
+      color: #38bdf8;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    header {
+      min-height: 85vh;
+      padding: 90px 20px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, #0ea5e9 0, transparent 30%),
+        radial-gradient(circle at bottom right, #6366f1 0, transparent 25%),
+        linear-gradient(135deg, #020617, #0f172a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    h1 {
+      font-size: 56px;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #cbd5e1;
+    }
+
+    .highlight {
+      color: #38bdf8;
       font-weight: bold;
     }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
+
+    .btn {
+      display: inline-block;
+      margin: 12px 8px;
+      padding: 12px 22px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
     }
+
+    .btn-outline {
+      background: transparent;
+      color: #38bdf8;
+      border: 1px solid #38bdf8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-top: 20px;
+      font-size: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid #334155;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #082f49;
+      color: #7dd3fc;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin: 4px;
+    }
+
+    .pub-meta {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
-      padding: 25px;
+      padding: 30px;
       color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 40px; }
+      nav { flex-direction: column; gap: 10px; }
+      nav a { margin: 6px; }
     }
   </style>
 </head>
 <body>
 
+<nav>
+  <div class="logo">Sauman Biswas</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <header>
-  <h1>Sauman Biswas</h1>
-  <p>Software Engineer | AI Researcher | Assistant Director (ICT), Bangladesh Bank</p>
-  <a class="btn" href="#projects">Projects</a>
-  <a class="btn" href="#publications">Publications</a>
-  <a class="btn" href="#contact">Contact</a>
+  <div class="hero">
+    <h1>Sauman Biswas</h1>
+    <p class="subtitle">
+      Deputy Director (ICT), Bangladesh Bank <br>
+      <span class="highlight">Software Engineer | AI Researcher | FinTech Systems Developer</span>
+    </p>
+    <a class="btn" href="#projects">View Projects</a>
+    <a class="btn btn-outline" href="#publications">Publications</a>
+    <a class="btn btn-outline" href="#contact">Contact Me</a>
+  </div>
 </header>
 
 <div class="container">
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I am a software engineer and AI researcher with experience in core banking systems,
       financial technology, machine learning, deep learning, and intelligent wearable systems.
-      My research interests include pre-impact fall detection, NLP, cybersecurity, fintech AI,
-      and human-centered intelligent systems.
+      Currently, I serve as Deputy Director (ICT) at Bangladesh Bank, where I work on
+      financial technology systems and critical banking applications.
     </p>
   </section>
 
-  <section>
+  <section id="research">
     <h2>Research Interests</h2>
-    <div class="card">Wearable AI and Pre-impact Fall Detection</div>
-    <div class="card">Machine Learning and Deep Learning</div>
-    <div class="card">Natural Language Processing</div>
-    <div class="card">Fintech, Cybersecurity, and Intelligent Systems</div>
+    <div class="grid">
+      <div class="card">Wearable AI and Pre-impact Fall Detection</div>
+      <div class="card">Machine Learning and Deep Learning</div>
+      <div class="card">Natural Language Processing</div>
+      <div class="card">FinTech, Cybersecurity, and Intelligent Systems</div>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="card">
-      <h3>SABiLNet</h3>
-      <p>A sensor-aware BiLSTM network for pre-impact fall detection using wearable IMU signals.</p>
-    </div>
-    <div class="card">
-      <h3>Potato Disease Detection</h3>
-      <p>Deep learning-based potato leaf disease classification using CNN.</p>
-    </div>
-    <div class="card">
-      <h3>Emotion Detection using NLP</h3>
-      <p>Text emotion classification using deep learning and natural language processing.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>SABiLNet</h3>
+        <p>A sensor-aware BiLSTM network for pre-impact fall detection using wearable IMU signals.</p>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Wearable AI</span>
+        <span class="tag">BiLSTM</span>
+      </div>
+
+      <div class="card">
+        <h3>Potato Disease Detection</h3>
+        <p>Deep learning-based potato leaf disease classification using CNN.</p>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">CNN</span>
+        <span class="tag">Computer Vision</span>
+      </div>
+
+      <div class="card">
+        <h3>Emotion Detection using NLP</h3>
+        <p>Text emotion classification using deep learning and natural language processing.</p>
+        <span class="tag">NLP</span>
+        <span class="tag">LSTM</span>
+        <span class="tag">Deep Learning</span>
+      </div>
+
+      <div class="card">
+        <h3>Core Banking and Treasury Systems</h3>
+        <p>Development and maintenance of financial technology systems for central banking operations.</p>
+        <span class="tag">Java</span>
+        <span class="tag">Oracle</span>
+        <span class="tag">FinTech</span>
+      </div>
     </div>
   </section>
 
   <section id="publications">
     <h2>Publications</h2>
+
     <div class="card">
       <h3>Performance Improvement of IEEE 802.11n WLANs via Frame Aggregation in NS-3</h3>
-      <p>Presented at ECCE 2017.</p>
+      <p class="pub-meta">MMS Kowsar, S Biswas</p>
+      <p class="pub-meta">2017 International Conference on Electrical, Computer and Communication Engineering</p>
+      <p class="pub-meta">Citations: 25 | Year: 2017</p>
     </div>
+
+    <div class="card">
+      <h3>Banglish-to-English Translation: Addressing Spelling Variations and Informal Script Challenges</h3>
+      <p class="pub-meta">S Biswas, RH Ronok, MM Islam</p>
+      <p class="pub-meta">2025 28th International Conference on Computer and Information Technology</p>
+      <p class="pub-meta">Year: 2025</p>
+    </div>
+
     <div class="card">
       <h3>SABiLNet: A Sensor-Aware BiLSTM Network for Pre-Impact Fall Detection</h3>
-      <p>Manuscript in progress.</p>
+      <p class="pub-meta">Manuscript in progress</p>
+      <p class="pub-meta">Research area: Wearable AI, IMU-based fall detection, deep learning</p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: csesauman@gmail.com</p>
-    <p>GitHub: github.com/saumanbiswas</p>
-    <p>LinkedIn: Add your LinkedIn link here</p>
+    <div class="card">
+      <p>Email: csesauman@gmail.com</p>
+      <p>GitHub: github.com/saumanbiswas</p>
+      <p>LinkedIn: Add your LinkedIn link here</p>
+      <p>Google Scholar: Add your Google Scholar link here</p>
+    </div>
   </section>
 
 </div>
