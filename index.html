@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,21 +22,21 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(2, 6, 23, 0.9);
+      background: rgba(2, 6, 23, 0.92);
       backdrop-filter: blur(10px);
       padding: 15px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
+      z-index: 1000;
       border-bottom: 1px solid #1e293b;
     }
 
     nav a {
       color: #e5e7eb;
       text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
+      margin-left: 20px;
+      font-size: 15px;
       transition: 0.3s;
     }
 
@@ -49,13 +47,14 @@
     .logo {
       color: #38bdf8;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 22px;
     }
 
     header {
-      min-height: 85vh;
+      min-height: 90vh;
       padding: 90px 20px;
       text-align: center;
+
       background:
         radial-gradient(circle at top left, #0ea5e9 0, transparent 30%),
         radial-gradient(circle at bottom right, #6366f1 0, transparent 25%),
@@ -67,17 +66,17 @@
     }
 
     .hero {
-      max-width: 850px;
+      max-width: 900px;
     }
 
     h1 {
-      font-size: 56px;
+      font-size: 60px;
       margin-bottom: 12px;
       color: white;
     }
 
     .subtitle {
-      font-size: 20px;
+      font-size: 22px;
       color: #cbd5e1;
     }
 
@@ -89,18 +88,18 @@
     .btn {
       display: inline-block;
       margin: 12px 8px;
-      padding: 12px 22px;
+      padding: 13px 24px;
       background: #38bdf8;
       color: #020617;
       text-decoration: none;
       border-radius: 999px;
       font-weight: bold;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
     }
 
     .btn-outline {
@@ -110,63 +109,113 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 70px;
     }
 
     h2 {
       color: #38bdf8;
-      margin-top: 20px;
-      font-size: 30px;
+      font-size: 34px;
+      margin-bottom: 25px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
+      gap: 22px;
     }
 
     .card {
       background: linear-gradient(145deg, #0f172a, #1e293b);
-      padding: 22px;
-      border-radius: 18px;
+      padding: 24px;
+      border-radius: 20px;
       border: 1px solid #334155;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
       border-color: #38bdf8;
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
-    }
-
-    .tag {
-      display: inline-block;
-      background: #082f49;
-      color: #7dd3fc;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      margin: 4px;
+      box-shadow: 0 12px 28px rgba(56, 189, 248, 0.15);
     }
 
     .pub-meta {
       color: #94a3b8;
       font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    /* =========================
+       GALLERY SECTION
+    ========================= */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 20px;
+    }
+
+    .photo-card {
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      border: 1px solid #334155;
+      border-radius: 22px;
+      overflow: hidden;
+      transition: 0.35s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .photo-card:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+      box-shadow: 0 15px 35px rgba(56, 189, 248, 0.18);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-content {
+      padding: 18px;
+    }
+
+    .photo-content h3 {
+      margin: 0;
+      color: #f8fafc;
+      font-size: 22px;
+    }
+
+    .photo-content p {
+      margin-top: 10px;
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       color: #94a3b8;
       border-top: 1px solid #1e293b;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     @media (max-width: 700px) {
+
       h1 {
-        font-size: 40px;
+        font-size: 42px;
+      }
+
+      .subtitle {
+        font-size: 18px;
       }
 
       nav {
@@ -177,11 +226,19 @@
       nav a {
         margin: 6px;
       }
+
+      .photo-card img {
+        height: 220px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
 
   <nav>
     <div class="logo">Sauman Biswas</div>
@@ -195,8 +252,14 @@
     </div>
   </nav>
 
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+
   <header>
+
     <div class="hero">
+
       <h1>Sauman Biswas</h1>
 
       <p class="subtitle">
@@ -207,7 +270,9 @@
         </span>
       </p>
 
-      <a class="btn" href="#research">Research Interests</a>
+      <a class="btn" href="#research">
+        Research Interests
+      </a>
 
       <a class="btn btn-outline" href="#publications">
         Publications
@@ -216,31 +281,49 @@
       <a class="btn btn-outline" href="#contact">
         Contact Me
       </a>
+
     </div>
+
   </header>
- 
+
+  <!-- =========================
+       MAIN CONTAINER
+  ========================== -->
+
   <div class="container">
 
+    <!-- ABOUT -->
+
     <section id="about">
+
       <h2>About Me</h2>
 
       <div class="card">
+
         <p>
           I am a software engineer and AI researcher with experience in
           core banking systems, financial technology, machine learning,
           deep learning, and intelligent wearable systems.
+        </p>
 
+        <p>
           Currently, I serve as Deputy Director (ICT) at Bangladesh Bank,
           where I work on financial technology systems and critical banking
           applications.
         </p>
+
       </div>
+
     </section>
 
+    <!-- RESEARCH -->
+
     <section id="research">
+
       <h2>Research Interests</h2>
 
       <div class="grid">
+
         <div class="card">
           Wearable AI and Pre-impact Fall Detection
         </div>
@@ -256,13 +339,19 @@
         <div class="card">
           FinTech, Cybersecurity, and Intelligent Systems
         </div>
+
       </div>
+
     </section>
 
+    <!-- PUBLICATIONS -->
+
     <section id="publications">
+
       <h2>Publications</h2>
 
       <div class="card">
+
         <h3>
           Performance Improvement of IEEE 802.11n WLANs via
           Frame Aggregation in NS-3
@@ -280,11 +369,13 @@
         <p class="pub-meta">
           Citations: 25 | Year: 2017
         </p>
+
       </div>
 
       <br>
 
       <div class="card">
+
         <h3>
           Banglish-to-English Translation:
           Addressing Spelling Variations and Informal Script Challenges
@@ -302,11 +393,13 @@
         <p class="pub-meta">
           Year: 2025
         </p>
+
       </div>
 
       <br>
 
       <div class="card">
+
         <h3>
           SABiLNet: A Sensor-Aware BiLSTM Network
           for Pre-Impact Fall Detection
@@ -320,35 +413,82 @@
           Research area: Wearable AI, IMU-based fall detection,
           deep learning
         </p>
+
       </div>
+
     </section>
 
-     <section id="gallery">
-  <h2>Gallery</h2>
+    <!-- GALLERY -->
 
-  <div class="gallery-grid">
-    <div class="photo-card">
-      <img src="images/iut-2011.jpg" alt="IUT Contest 2011">
-      <h3>IUT Contest 2011</h3>
-    </div>
+    <section id="gallery">
 
-    <div class="photo-card">
-      <img src="images/iiuc-2011.jpg" alt="IIUC Contest 2011">
-      <h3>IIUC Contest 2011</h3>
-    </div>
+      <h2>Gallery</h2>
 
-    <div class="photo-card">
-      <img src="images/buet-ncpc.jpg" alt="BUET NCPC">
-      <h3>BUET NCPC</h3>
-    </div>
-  </div>
-</section>
+      <div class="gallery-grid">
 
+        <div class="photo-card">
+
+          <img src="images/iut-2011.jpg" alt="IUT Contest 2011">
+
+          <div class="photo-content">
+
+            <h3>IUT Programming Contest 2011</h3>
+
+            <p>
+              Participated in inter-university programming contests
+              during undergraduate studies.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="photo-card">
+
+          <img src="images/iiuc-2011.jpg" alt="IIUC Contest">
+
+          <div class="photo-content">
+
+            <h3>IIUC Programming Contest</h3>
+
+            <p>
+              Competitive programming and algorithmic problem-solving
+              activities with university teams.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="photo-card">
+
+          <img src="images/buet-ncpc.jpg" alt="BUET NCPC">
+
+          <div class="photo-content">
+
+            <h3>BUET NCPC</h3>
+
+            <p>
+              National Collegiate Programming Contest participation
+              experience at BUET.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
 
     <section id="contact">
+
       <h2>Contact</h2>
 
       <div class="card">
+
         <p>Email: csesauman@gmail.com</p>
 
         <p>
@@ -358,17 +498,21 @@
 
         <p>
           LinkedIn:
-          Add your LinkedIn link here
+          Add your LinkedIn profile link here
         </p>
 
         <p>
           Google Scholar:
-          Add your Google Scholar link here
+          Add your Google Scholar profile link here
         </p>
+
       </div>
+
     </section>
 
   </div>
+
+  <!-- FOOTER -->
 
   <footer>
     © 2026 Sauman Biswas. All rights reserved.
@@ -376,5 +520,3 @@
 
 </body>
 </html>
-
-
