@@ -8,32 +8,24 @@
   <title>Sauman Biswas</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
 
     body {
+
       margin: 0;
-      font-family: Arial, sans-serif;
 
-      background:
-        radial-gradient(circle at top left,
-          rgba(255, 0, 60, 0.18),
-          transparent 25%),
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-        radial-gradient(circle at bottom right,
-          rgba(180, 0, 40, 0.20),
-          transparent 30%),
+      background: #f5f7fb;
 
-        radial-gradient(circle at center,
-          rgba(255, 30, 70, 0.08),
-          transparent 45%),
+      color: #1e293b;
 
-        linear-gradient(135deg, #050505, #12070b, #1a0a10);
+      line-height: 1.7;
 
-      color: #e5e7eb;
-      line-height: 1.6;
       overflow-x: hidden;
     }
 
@@ -42,43 +34,54 @@
     ========================= */
 
     nav {
+
       position: sticky;
+
       top: 0;
 
-      background: rgba(10, 5, 8, 0.92);
+      background: rgba(255, 255, 255, 0.75);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
 
-      padding: 15px 8%;
+      padding: 16px 8%;
 
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       z-index: 1000;
 
-      border-bottom: 1px solid rgba(255, 0, 60, 0.18);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
 
-      box-shadow:
-        0 0 25px rgba(255, 0, 60, 0.08);
     }
 
     .logo {
-      color: #ff4d73;
+
       font-size: 24px;
-      font-weight: bold;
+
+      font-weight: 700;
+
+      color: #2563eb;
     }
 
     nav a {
-      color: #e5e7eb;
+
+      color: #334155;
+
       text-decoration: none;
-      margin-left: 22px;
+
+      margin-left: 24px;
+
       font-size: 15px;
+
       transition: 0.3s ease;
     }
 
     nav a:hover {
-      color: #ff5c7d;
+
+      color: #2563eb;
     }
 
     /* =========================
@@ -86,33 +89,36 @@
     ========================= */
 
     header {
+
       min-height: 100vh;
 
-      padding: 90px 20px;
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
 
       text-align: center;
 
+      padding: 90px 20px;
+
       background:
         radial-gradient(circle at top left,
-          rgba(255, 0, 60, 0.35),
+          rgba(37, 99, 235, 0.08),
           transparent 28%),
 
         radial-gradient(circle at bottom right,
-          rgba(180, 0, 40, 0.28),
+          rgba(59, 130, 246, 0.10),
           transparent 25%),
 
-        radial-gradient(circle at center,
-          rgba(255, 50, 90, 0.12),
-          transparent 45%),
+        linear-gradient(180deg,
+          #f8fafc,
+          #eef2ff);
 
-        linear-gradient(135deg, #050505, #13070c, #1b0a11);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .hero {
+
       max-width: 950px;
     }
 
@@ -121,50 +127,54 @@
     ========================= */
 
     .profile-image {
+
       margin-bottom: 30px;
     }
 
     .profile-image img {
 
       width: 190px;
-      height: 190px;
 
-      object-fit: cover;
+      height: 190px;
 
       border-radius: 50%;
 
-      border: 4px solid rgba(255, 0, 60, 0.55);
+      object-fit: cover;
+
+      border: 5px solid white;
 
       box-shadow:
-        0 0 20px rgba(255, 0, 60, 0.35),
-        0 0 45px rgba(255, 0, 60, 0.15);
+        0 10px 30px rgba(37, 99, 235, 0.15);
 
       transition: 0.4s ease;
     }
 
     .profile-image img:hover {
 
-      transform: scale(1.05);
-
-      box-shadow:
-        0 0 30px rgba(255, 0, 60, 0.55),
-        0 0 60px rgba(255, 0, 60, 0.25);
+      transform: scale(1.04);
     }
 
     h1 {
+
       font-size: 62px;
+
       margin-bottom: 12px;
-      color: white;
+
+      color: #0f172a;
     }
 
     .subtitle {
+
       font-size: 22px;
-      color: #cbd5e1;
+
+      color: #475569;
     }
 
     .highlight {
-      color: #ff4d73;
-      font-weight: bold;
+
+      color: #2563eb;
+
+      font-weight: 600;
     }
 
     /* =========================
@@ -172,17 +182,14 @@
     ========================= */
 
     .btn {
+
       display: inline-block;
 
       margin: 12px 8px;
 
-      padding: 13px 24px;
+      padding: 13px 26px;
 
-      background: linear-gradient(
-        135deg,
-        #ff1744,
-        #d50032
-      );
+      background: #2563eb;
 
       color: white;
 
@@ -190,29 +197,28 @@
 
       border-radius: 999px;
 
-      font-weight: bold;
+      font-weight: 600;
 
       transition: 0.3s ease;
 
       box-shadow:
-        0 0 15px rgba(255, 0, 60, 0.25);
+        0 8px 20px rgba(37, 99, 235, 0.18);
     }
 
     .btn:hover {
 
       transform: translateY(-3px);
 
-      box-shadow:
-        0 0 30px rgba(255, 0, 60, 0.45);
+      background: #1d4ed8;
     }
 
     .btn-outline {
 
       background: transparent;
 
-      border: 1px solid rgba(255, 0, 60, 0.45);
+      border: 1px solid #2563eb;
 
-      color: #ff6b8a;
+      color: #2563eb;
     }
 
     /* =========================
@@ -220,25 +226,47 @@
     ========================= */
 
     .container {
+
       max-width: 1150px;
+
       margin: auto;
-      padding: 60px 20px;
+
+      padding: 70px 20px;
     }
 
     section {
-      margin-bottom: 80px;
+
+      margin-bottom: 90px;
     }
 
     h2 {
-      color: #ff4d73;
+
+      color: #0f172a;
+
       font-size: 36px;
-      margin-bottom: 25px;
+
+      margin-bottom: 30px;
+
+      position: relative;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+    h2::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -10px;
+
+      width: 70px;
+
+      height: 4px;
+
+      border-radius: 999px;
+
+      background: #2563eb;
     }
 
     /* =========================
@@ -248,42 +276,53 @@
     .card,
     .photo-card {
 
-      background: linear-gradient(
-        145deg,
-        rgba(25, 10, 15, 0.95),
-        rgba(40, 12, 20, 0.92)
-      );
+      background: rgba(255, 255, 255, 0.72);
 
-      border: 1px solid rgba(255, 0, 60, 0.15);
+      backdrop-filter: blur(14px);
 
-      border-radius: 22px;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+
+      border-radius: 24px;
 
       transition: 0.35s ease;
 
       box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.35),
-        0 0 15px rgba(255, 0, 60, 0.06);
+        0 10px 30px rgba(15, 23, 42, 0.05);
     }
 
     .card {
-      padding: 25px;
+
+      padding: 28px;
     }
 
     .card:hover,
     .photo-card:hover {
 
-      transform: translateY(-8px);
-
-      border-color: rgba(255, 60, 100, 0.45);
+      transform: translateY(-6px);
 
       box-shadow:
-        0 18px 35px rgba(0, 0, 0, 0.45),
-        0 0 22px rgba(255, 0, 60, 0.18);
+        0 18px 35px rgba(15, 23, 42, 0.10);
+    }
+
+    /* =========================
+       GRID
+    ========================= */
+
+    .grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 24px;
     }
 
     .pub-meta {
-      color: #94a3b8;
+
+      color: #64748b;
+
       font-size: 14px;
+
       margin-bottom: 6px;
     }
 
@@ -292,37 +331,52 @@
     ========================= */
 
     .gallery-grid {
+
       display: grid;
+
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
       gap: 28px;
-      margin-top: 20px;
     }
 
     .photo-card {
+
       overflow: hidden;
     }
 
     .photo-card img {
+
       width: 100%;
+
       height: 260px;
+
       object-fit: cover;
+
       display: block;
     }
 
     .photo-content {
-      padding: 20px;
+
+      padding: 22px;
     }
 
     .photo-content h3 {
+
       margin: 0;
-      color: #f8fafc;
+
+      color: #0f172a;
+
       font-size: 22px;
     }
 
     .photo-content p {
+
       margin-top: 10px;
-      color: #94a3b8;
+
+      color: #64748b;
+
       font-size: 15px;
+
       line-height: 1.6;
     }
 
@@ -331,11 +385,16 @@
     ========================= */
 
     footer {
+
       text-align: center;
+
       padding: 35px;
-      color: #94a3b8;
-      border-top: 1px solid rgba(255, 0, 60, 0.12);
-      margin-top: 40px;
+
+      color: #64748b;
+
+      border-top: 1px solid rgba(148, 163, 184, 0.15);
+
+      background: rgba(255,255,255,0.5);
     }
 
     /* =========================
@@ -345,39 +404,46 @@
     @media (max-width: 700px) {
 
       nav {
+
         flex-direction: column;
+
         gap: 10px;
       }
 
       nav a {
+
         margin: 6px;
       }
 
       h1 {
+
         font-size: 42px;
       }
 
       .subtitle {
+
         font-size: 18px;
       }
 
       .profile-image img {
+
         width: 150px;
+
         height: 150px;
       }
 
       .photo-card img {
+
         height: 220px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================= -->
+  <!-- NAVBAR -->
 
   <nav>
 
@@ -395,19 +461,14 @@
 
   </nav>
 
-  <!-- =========================
-       HERO SECTION
-  ========================= -->
+  <!-- HERO -->
 
   <header>
 
     <div class="hero">
 
-      <!-- PROFILE IMAGE -->
-
       <div class="profile-image">
 
-        <!-- PUT YOUR PHOTO HERE -->
         <img src="./sauman.jpg" alt="Sauman Biswas">
 
       </div>
@@ -442,9 +503,7 @@
 
   </header>
 
-  <!-- =========================
-       MAIN CONTAINER
-  ========================= -->
+  <!-- MAIN -->
 
   <div class="container">
 
@@ -668,9 +727,7 @@
 
   </div>
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
     © 2026 Sauman Biswas. All rights reserved.
