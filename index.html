@@ -305,7 +305,8 @@
     ========================= */
 
     .card,
-    .photo-card {
+    .photo-card,
+    .edu-card {
 
       background: rgba(15, 23, 42, 0.72);
 
@@ -327,7 +328,8 @@
     }
 
     .card:hover,
-    .photo-card:hover {
+    .photo-card:hover,
+    .edu-card:hover {
 
       transform: translateY(-6px);
 
@@ -348,6 +350,53 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
       gap: 24px;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+      gap: 24px;
+    }
+
+    .edu-card {
+
+      padding: 28px;
+    }
+
+    .edu-degree {
+
+      font-size: 22px;
+
+      color: #f8fafc;
+
+      margin-bottom: 12px;
+
+      font-weight: 600;
+    }
+
+    .edu-institute {
+
+      color: #cbd5e1;
+
+      font-size: 16px;
+
+      margin-bottom: 12px;
+    }
+
+    .edu-result {
+
+      color: #60a5fa;
+
+      font-size: 15px;
+
+      font-weight: 600;
     }
 
     /* =========================
@@ -491,6 +540,7 @@
 
     <div>
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#gallery">Gallery</a>
@@ -569,207 +619,71 @@
 
     </section>
 
-    <!-- RESEARCH -->
+    <!-- EDUCATION -->
 
-    <section id="research">
+    <section id="education">
 
-      <h2>Research Interests</h2>
+      <h2>Education</h2>
 
-      <div class="grid">
+      <div class="education-grid">
 
-        <div class="card">
-          Wearable AI and Pre-impact Fall Detection
-        </div>
+        <div class="edu-card">
 
-        <div class="card">
-          Machine Learning and Deep Learning
-        </div>
+          <div class="edu-degree">
+            Secondary School Certificate (SSC)
+          </div>
 
-        <div class="card">
-          Natural Language Processing
-        </div>
-
-        <div class="card">
-          FinTech, Cybersecurity, and Intelligent Systems
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- PUBLICATIONS -->
-
-    <section id="publications">
-
-      <h2>Publications</h2>
-
-      <div class="card">
-
-        <h3>
-          Performance Improvement of IEEE 802.11n WLANs via
-          Frame Aggregation in NS-3
-        </h3>
-
-        <p class="pub-meta">
-          MMS Kowsar, S Biswas
-        </p>
-
-        <p class="pub-meta">
-          2017 International Conference on Electrical,
-          Computer and Communication Engineering
-        </p>
-
-        <p class="pub-meta">
-          Citations: 25 | Year: 2017
-        </p>
-
-      </div>
-
-      <br>
-
-      <div class="card">
-
-        <h3>
-          Banglish-to-English Translation:
-          Addressing Spelling Variations and Informal Script Challenges
-        </h3>
-
-        <p class="pub-meta">
-          S Biswas, RH Ronok, MM Islam
-        </p>
-
-        <p class="pub-meta">
-          2025 28th International Conference on
-          Computer and Information Technology
-        </p>
-
-        <p class="pub-meta">
-          Year: 2025
-        </p>
-
-      </div>
-
-      <br>
-
-      <div class="card">
-
-        <h3>
-          SABiLNet: A Sensor-Aware BiLSTM Network
-          for Pre-Impact Fall Detection
-        </h3>
-
-        <p class="pub-meta">
-          Manuscript in progress
-        </p>
-
-        <p class="pub-meta">
-          Research area: Wearable AI, IMU-based fall detection,
-          deep learning
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- GALLERY -->
-
-    <section id="gallery">
-
-      <h2>Gallery</h2>
-
-      <div class="gallery-grid">
-
-        <div class="photo-card">
-
-          <img src="images/iut-2011.jpg" alt="IUT Contest">
-
-          <div class="photo-content">
-
-            <h3>IUT Programming Contest 2011</h3>
-
-            <p>
-              Participated in inter-university programming contests
-              during undergraduate studies.
-            </p>
-
+          <div class="edu-result">
+            GPA 5.00 out of 5.00
           </div>
 
         </div>
 
-        <div class="photo-card">
+        <div class="edu-card">
 
-          <img src="images/iiuc-2011.jpg" alt="IIUC Contest">
+          <div class="edu-degree">
+            Higher Secondary Certificate (HSC)
+          </div>
 
-          <div class="photo-content">
-
-            <h3>IIUC Programming Contest</h3>
-
-            <p>
-              Competitive programming and algorithmic problem-solving
-              activities with university teams.
-            </p>
-
+          <div class="edu-result">
+            GPA 5.00 out of 5.00
           </div>
 
         </div>
 
-        <div class="photo-card">
+        <div class="edu-card">
 
-          <img src="BUET.jpg" alt="BUET NCPC">
+          <div class="edu-degree">
+            Bachelor of Science in Computer Science & Engineering
+          </div>
 
-          <div class="photo-content">
-
-            <h3>BUET NCPC</h3>
-
-            <p>
-              National Collegiate Programming Contest participation
-              experience at BUET.
-            </p>
-
+          <div class="edu-institute">
+            Chittagong University of Engineering and Technology (CUET)
           </div>
 
         </div>
 
-      </div>
+        <div class="edu-card">
 
-    </section>
+          <div class="edu-degree">
+            Master of Science in Computer Science & Engineering
+          </div>
 
-    <!-- CONTACT -->
+          <div class="edu-institute">
+            United International University (UIU)
+          </div>
 
-    <section id="contact">
+          <div class="edu-result">
+            Major: Data Science | CGPA 4.00 out of 4.00
+          </div>
 
-      <h2>Contact</h2>
-
-      <div class="card">
-
-        <p>Email: csesauman@gmail.com</p>
-
-        <p>
-          GitHub:
-          github.com/saumanbiswas
-        </p>
-
-        <p>
-          LinkedIn:
-          Add your LinkedIn profile link here
-        </p>
-
-        <p>
-          Google Scholar:
-          Add your Google Scholar profile link here
-        </p>
+        </div>
 
       </div>
 
     </section>
 
   </div>
-
-  <!-- FOOTER -->
-
-  <footer>
-    © 2026 Sauman Biswas. All rights reserved.
-  </footer>
 
 </body>
 
