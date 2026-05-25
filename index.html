@@ -1,11 +1,93 @@
+ChatGPT
+
+
+what is deep state
+
+Fast answer
+The term “deep state” is used in a few different ways, depending on context and who is using it.
+
+Most commonly, it refers to the idea that permanent government officials, intelligence agencies, military leaders, or bureaucrats continue to influence policy regardless of which elected politicians are in power.
+
+There are two main ways people use the term:
+
+Neutral / institutional meaning
+In political science, it can describe the enduring parts of government — agencies, civil servants, military, intelligence services, courts, etc. These institutions remain in place even when presidents or parties change.
+Examples include organizations like:
+
+Central Intelligence Agency
+
+Federal Bureau of Investigation
+
+Department of Defense
+
+In this sense, the term is often used to discuss how bureaucracies maintain continuity and expertise.
+
+Conspiracy-oriented meaning
+Some people use “deep state” to claim that hidden groups inside government secretly control major decisions, undermine elected leaders, or manipulate events behind the scenes. These claims are common in political rhetoric and conspiracy theories, especially in countries with political instability or distrust of institutions.
+
+Historically, the phrase originated from discussions about countries like:
+
+Turkey
+where networks involving military, intelligence, and political actors were alleged to operate unofficially behind the government.
+
+In modern politics — especially in the United States — the term became widely used during debates involving:
+
+Donald Trump
+and accusations that federal agencies or officials were resisting his administration.
+
+Whether a “deep state” exists in the stronger conspiratorial sense is heavily disputed. Critics argue the term is often used without evidence to discredit institutions or political opponents, while supporters argue unelected officials can wield significant hidden influence.
+
+So, depending on usage, “deep state” can mean either:
+
+the normal permanent bureaucracy of a government, or
+
+an alleged hidden power network operating behind elected leadership.
+
+
+
+Pasted text(47).txt
+Document
+remove projects
+
+Remove these portions from your HTML file: 
+
+
+<a href="#projects">Projects</a>
+And remove the entire Projects section: 
+
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    ...
+  </div>
+</section>
+Also update this button in the hero section: 
+
+
+Change:
+
+<a class="btn" href="#projects">View Projects</a>
+to something like:
+
+<a class="btn" href="#research">Research Interests</a>
+This will completely remove the Projects section from your portfolio website.
+
+
+full index file
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sauman Biswas</title>
+
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -33,6 +115,11 @@
       text-decoration: none;
       margin-left: 18px;
       font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
     }
 
     .logo {
@@ -49,6 +136,7 @@
         radial-gradient(circle at top left, #0ea5e9 0, transparent 30%),
         radial-gradient(circle at bottom right, #6366f1 0, transparent 25%),
         linear-gradient(135deg, #020617, #0f172a);
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,6 +171,12 @@
       text-decoration: none;
       border-radius: 999px;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
     }
 
     .btn-outline {
@@ -143,139 +237,197 @@
       padding: 30px;
       color: #94a3b8;
       border-top: 1px solid #1e293b;
+      margin-top: 50px;
     }
 
     @media (max-width: 700px) {
-      h1 { font-size: 40px; }
-      nav { flex-direction: column; gap: 10px; }
-      nav a { margin: 6px; }
+      h1 {
+        font-size: 40px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 6px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <div class="logo">Sauman Biswas</div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
+  <nav>
+    <div class="logo">Sauman Biswas</div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <h1>Sauman Biswas</h1>
+
+      <p class="subtitle">
+        Deputy Director (ICT), Bangladesh Bank
+        <br>
+        <span class="highlight">
+          Software Engineer | AI Researcher | FinTech Systems Developer
+        </span>
+      </p>
+
+      <a class="btn" href="#research">Research Interests</a>
+
+      <a class="btn btn-outline" href="#publications">
+        Publications
+      </a>
+
+      <a class="btn btn-outline" href="#contact">
+        Contact Me
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About Me</h2>
+
+      <div class="card">
+        <p>
+          I am a software engineer and AI researcher with experience in
+          core banking systems, financial technology, machine learning,
+          deep learning, and intelligent wearable systems.
+
+          Currently, I serve as Deputy Director (ICT) at Bangladesh Bank,
+          where I work on financial technology systems and critical banking
+          applications.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+
+      <div class="grid">
+        <div class="card">
+          Wearable AI and Pre-impact Fall Detection
+        </div>
+
+        <div class="card">
+          Machine Learning and Deep Learning
+        </div>
+
+        <div class="card">
+          Natural Language Processing
+        </div>
+
+        <div class="card">
+          FinTech, Cybersecurity, and Intelligent Systems
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="card">
+        <h3>
+          Performance Improvement of IEEE 802.11n WLANs via
+          Frame Aggregation in NS-3
+        </h3>
+
+        <p class="pub-meta">
+          MMS Kowsar, S Biswas
+        </p>
+
+        <p class="pub-meta">
+          2017 International Conference on Electrical,
+          Computer and Communication Engineering
+        </p>
+
+        <p class="pub-meta">
+          Citations: 25 | Year: 2017
+        </p>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h3>
+          Banglish-to-English Translation:
+          Addressing Spelling Variations and Informal Script Challenges
+        </h3>
+
+        <p class="pub-meta">
+          S Biswas, RH Ronok, MM Islam
+        </p>
+
+        <p class="pub-meta">
+          2025 28th International Conference on
+          Computer and Information Technology
+        </p>
+
+        <p class="pub-meta">
+          Year: 2025
+        </p>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h3>
+          SABiLNet: A Sensor-Aware BiLSTM Network
+          for Pre-Impact Fall Detection
+        </h3>
+
+        <p class="pub-meta">
+          Manuscript in progress
+        </p>
+
+        <p class="pub-meta">
+          Research area: Wearable AI, IMU-based fall detection,
+          deep learning
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="card">
+        <p>Email: csesauman@gmail.com</p>
+
+        <p>
+          GitHub:
+          github.com/saumanbiswas
+        </p>
+
+        <p>
+          LinkedIn:
+          Add your LinkedIn link here
+        </p>
+
+        <p>
+          Google Scholar:
+          Add your Google Scholar link here
+        </p>
+      </div>
+    </section>
+
   </div>
-</nav>
 
-<header>
-  <div class="hero">
-    <h1>Sauman Biswas</h1>
-    <p class="subtitle">
-      Deputy Director (ICT), Bangladesh Bank <br>
-      <span class="highlight">Software Engineer | AI Researcher | FinTech Systems Developer</span>
-    </p>
-    <a class="btn" href="#projects">View Projects</a>
-    <a class="btn btn-outline" href="#publications">Publications</a>
-    <a class="btn btn-outline" href="#contact">Contact Me</a>
-  </div>
-</header>
-
-<div class="container">
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a software engineer and AI researcher with experience in core banking systems,
-      financial technology, machine learning, deep learning, and intelligent wearable systems.
-      Currently, I serve as Deputy Director (ICT) at Bangladesh Bank, where I work on
-      financial technology systems and critical banking applications.
-    </p>
-  </section>
-
-  <section id="research">
-    <h2>Research Interests</h2>
-    <div class="grid">
-      <div class="card">Wearable AI and Pre-impact Fall Detection</div>
-      <div class="card">Machine Learning and Deep Learning</div>
-      <div class="card">Natural Language Processing</div>
-      <div class="card">FinTech, Cybersecurity, and Intelligent Systems</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>SABiLNet</h3>
-        <p>A sensor-aware BiLSTM network for pre-impact fall detection using wearable IMU signals.</p>
-        <span class="tag">PyTorch</span>
-        <span class="tag">Wearable AI</span>
-        <span class="tag">BiLSTM</span>
-      </div>
-
-      <div class="card">
-        <h3>Potato Disease Detection</h3>
-        <p>Deep learning-based potato leaf disease classification using CNN.</p>
-        <span class="tag">TensorFlow</span>
-        <span class="tag">CNN</span>
-        <span class="tag">Computer Vision</span>
-      </div>
-
-      <div class="card">
-        <h3>Emotion Detection using NLP</h3>
-        <p>Text emotion classification using deep learning and natural language processing.</p>
-        <span class="tag">NLP</span>
-        <span class="tag">LSTM</span>
-        <span class="tag">Deep Learning</span>
-      </div>
-
-      <div class="card">
-        <h3>Core Banking and Treasury Systems</h3>
-        <p>Development and maintenance of financial technology systems for central banking operations.</p>
-        <span class="tag">Java</span>
-        <span class="tag">Oracle</span>
-        <span class="tag">FinTech</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-
-    <div class="card">
-      <h3>Performance Improvement of IEEE 802.11n WLANs via Frame Aggregation in NS-3</h3>
-      <p class="pub-meta">MMS Kowsar, S Biswas</p>
-      <p class="pub-meta">2017 International Conference on Electrical, Computer and Communication Engineering</p>
-      <p class="pub-meta">Citations: 25 | Year: 2017</p>
-    </div>
-
-    <div class="card">
-      <h3>Banglish-to-English Translation: Addressing Spelling Variations and Informal Script Challenges</h3>
-      <p class="pub-meta">S Biswas, RH Ronok, MM Islam</p>
-      <p class="pub-meta">2025 28th International Conference on Computer and Information Technology</p>
-      <p class="pub-meta">Year: 2025</p>
-    </div>
-
-    <div class="card">
-      <h3>SABiLNet: A Sensor-Aware BiLSTM Network for Pre-Impact Fall Detection</h3>
-      <p class="pub-meta">Manuscript in progress</p>
-      <p class="pub-meta">Research area: Wearable AI, IMU-based fall detection, deep learning</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: csesauman@gmail.com</p>
-      <p>GitHub: github.com/saumanbiswas</p>
-      <p>LinkedIn: Add your LinkedIn link here</p>
-      <p>Google Scholar: Add your Google Scholar link here</p>
-    </div>
-  </section>
-
-</div>
-
-<footer>
-  © 2026 Sauman Biswas. All rights reserved.
-</footer>
+  <footer>
+    © 2026 Sauman Biswas. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
+
