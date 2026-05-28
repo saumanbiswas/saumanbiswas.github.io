@@ -1,543 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Sauman Biswas</title>
 
   <style>
-
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
 
     body {
-
       margin: 0;
-
       font-family: 'Segoe UI', sans-serif;
-
       background:
-        radial-gradient(circle at top left,
-          rgba(59, 130, 246, 0.08),
-          transparent 25%),
-
-        radial-gradient(circle at bottom right,
-          rgba(96, 165, 250, 0.06),
-          transparent 30%),
-
-        linear-gradient(
-          180deg,
-          #081120 0%,
-          #0b1728 40%,
-          #0f1d33 100%
-        );
-
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.06), transparent 30%),
+        linear-gradient(180deg, #081120 0%, #0b1728 40%, #0f1d33 100%);
       color: #e2e8f0;
-
       line-height: 1.7;
-
       overflow-x: hidden;
     }
 
-    /* =========================
-       NAVBAR
-    ========================= */
-
     nav {
-
       position: sticky;
-
       top: 0;
-
       background: rgba(8, 17, 32, 0.72);
-
       backdrop-filter: blur(16px);
-
       padding: 16px 8%;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
       z-index: 1000;
-
       border-bottom: 1px solid rgba(148, 163, 184, 0.08);
-
-      box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     }
 
     .logo {
-
       font-size: 24px;
-
       font-weight: 700;
-
       color: #60a5fa;
     }
 
     nav a {
-
       color: #cbd5e1;
-
       text-decoration: none;
-
       margin-left: 24px;
-
       font-size: 15px;
-
       transition: 0.3s ease;
     }
 
     nav a:hover {
-
       color: #60a5fa;
     }
 
-    /* =========================
-       HERO SECTION
-    ========================= */
-
     header {
-
       min-height: 100vh;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       text-align: center;
-
       padding: 90px 20px;
-
       background:
-        radial-gradient(circle at top left,
-          rgba(59, 130, 246, 0.10),
-          transparent 28%),
-
-        radial-gradient(circle at bottom right,
-          rgba(96, 165, 250, 0.08),
-          transparent 25%),
-
-        linear-gradient(
-          180deg,
-          #081120 0%,
-          #0b1728 100%
-        );
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.08), transparent 25%),
+        linear-gradient(180deg, #081120 0%, #0b1728 100%);
     }
 
     .hero {
-
       max-width: 950px;
     }
 
-    /* =========================
-       PROFILE IMAGE
-    ========================= */
-
     .profile-image {
-
       margin-bottom: 30px;
     }
 
     .profile-image img {
-
       width: 190px;
-
       height: 190px;
-
       border-radius: 50%;
-
       object-fit: cover;
-
       border: 5px solid rgba(96, 165, 250, 0.35);
-
-      box-shadow:
-        0 12px 35px rgba(59, 130, 246, 0.18);
-
+      box-shadow: 0 12px 35px rgba(59, 130, 246, 0.18);
       transition: 0.4s ease;
     }
 
     .profile-image img:hover {
-
       transform: scale(1.04);
-
-      box-shadow:
-        0 18px 45px rgba(59, 130, 246, 0.28);
+      box-shadow: 0 18px 45px rgba(59, 130, 246, 0.28);
     }
 
-    /* =========================
-       TITLES
-    ========================= */
-
     h1 {
-
       font-size: 62px;
-
       margin-bottom: 12px;
-
       color: #f8fafc;
     }
 
     .subtitle {
-
       font-size: 22px;
-
       color: #cbd5e1;
     }
 
     .highlight {
-
       color: #60a5fa;
-
       font-weight: 600;
     }
 
     h2 {
-
       color: #f8fafc;
-
       font-size: 36px;
-
       margin-bottom: 30px;
-
       position: relative;
     }
 
     h2::after {
-
       content: "";
-
       position: absolute;
-
       left: 0;
-
       bottom: -10px;
-
       width: 70px;
-
       height: 4px;
-
       border-radius: 999px;
-
       background: #60a5fa;
     }
 
-    /* =========================
-       BUTTONS
-    ========================= */
-
     .btn {
-
       display: inline-block;
-
       margin: 12px 8px;
-
       padding: 13px 26px;
-
-      background: linear-gradient(
-        135deg,
-        #2563eb,
-        #3b82f6
-      );
-
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
       color: white;
-
       text-decoration: none;
-
       border-radius: 999px;
-
       font-weight: 600;
-
       transition: 0.3s ease;
-
-      box-shadow:
-        0 10px 25px rgba(37, 99, 235, 0.20);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.20);
     }
 
     .btn:hover {
-
       transform: translateY(-3px);
-
-      box-shadow:
-        0 16px 35px rgba(37, 99, 235, 0.30);
+      box-shadow: 0 16px 35px rgba(37, 99, 235, 0.30);
     }
 
     .btn-outline {
-
       background: transparent;
-
       border: 1px solid rgba(96, 165, 250, 0.45);
-
       color: #93c5fd;
     }
 
-    /* =========================
-       CONTAINER
-    ========================= */
-
     .container {
-
       max-width: 1150px;
-
       margin: auto;
-
       padding: 70px 20px;
     }
 
     section {
-
       margin-bottom: 90px;
     }
-
-    /* =========================
-       CARDS
-    ========================= */
 
     .card,
     .photo-card,
     .edu-card {
-
       background: rgba(15, 23, 42, 0.72);
-
       backdrop-filter: blur(16px);
-
       border: 1px solid rgba(148, 163, 184, 0.08);
-
       border-radius: 24px;
-
       transition: 0.35s ease;
-
-      box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
     .card {
-
       padding: 28px;
     }
 
     .card:hover,
     .photo-card:hover,
     .edu-card:hover {
-
       transform: translateY(-6px);
-
       border-color: rgba(96, 165, 250, 0.20);
-
-      box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
     }
 
-    /* =========================
-       GRID
-    ========================= */
-
     .grid {
-
       display: grid;
-
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
       gap: 24px;
     }
 
-    /* =========================
-       EDUCATION
-    ========================= */
-
     .education-grid {
-
       display: grid;
-
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
       gap: 24px;
     }
 
     .edu-card {
-
       padding: 28px;
     }
 
     .edu-degree {
-
       font-size: 22px;
-
       color: #f8fafc;
-
       margin-bottom: 12px;
-
       font-weight: 600;
     }
 
     .edu-institute {
-
       color: #cbd5e1;
-
       font-size: 16px;
-
       margin-bottom: 12px;
     }
 
     .edu-result {
-
       color: #60a5fa;
-
       font-size: 15px;
-
       font-weight: 600;
     }
 
-    /* =========================
-       PUBLICATIONS
-    ========================= */
-
     .pub-meta {
-
       color: #94a3b8;
-
       font-size: 14px;
-
       margin-bottom: 6px;
     }
 
-    /* =========================
-       GALLERY
-    ========================= */
-
+    /* Gallery fixed */
     .gallery-grid {
-
       display: grid;
-
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-      gap: 28px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
     }
 
     .photo-card {
-
       overflow: hidden;
+      border: 2px solid rgba(96, 165, 250, 0.30);
     }
 
     .photo-card img {
-
       width: 100%;
-
-      height: 260px;
-
+      height: 180px;
       object-fit: cover;
-
       display: block;
+      border-bottom: 2px solid rgba(96, 165, 250, 0.25);
     }
 
     .photo-content {
-
-      padding: 22px;
+      padding: 18px;
     }
 
     .photo-content h3 {
-
       margin: 0;
-
       color: #f8fafc;
-
-      font-size: 22px;
+      font-size: 18px;
     }
 
     .photo-content p {
-
       margin-top: 10px;
-
       color: #94a3b8;
-
-      font-size: 15px;
-
+      font-size: 14px;
       line-height: 1.6;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
-
     footer {
-
       text-align: center;
-
       padding: 35px;
-
       color: #94a3b8;
-
       border-top: 1px solid rgba(148, 163, 184, 0.08);
-
       background: rgba(8, 17, 32, 0.65);
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    @media (max-width: 1100px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     @media (max-width: 700px) {
-
       nav {
-
         flex-direction: column;
-
         gap: 10px;
       }
 
       nav a {
-
         margin: 6px;
       }
 
       h1 {
-
         font-size: 42px;
       }
 
       .subtitle {
-
         font-size: 18px;
       }
 
       .profile-image img {
-
         width: 150px;
-
         height: 150px;
       }
 
-      .photo-card img {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
 
+      .photo-card img {
         height: 220px;
       }
     }
-
   </style>
-
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-
   <nav>
-
-    <div class="logo">
-      Sauman Biswas
-    </div>
-
+    <div class="logo">Sauman Biswas</div>
     <div>
       <a href="#about">About</a>
       <a href="#education">Education</a>
@@ -546,345 +320,209 @@
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </div>
-
   </nav>
 
-  <!-- HERO -->
-
   <header>
-
     <div class="hero">
-
       <div class="profile-image">
-
         <img src="./sauman.jpg" alt="Sauman Biswas">
-
       </div>
 
       <h1>Sauman Biswas</h1>
 
       <p class="subtitle">
-
         Deputy Director (ICT), Bangladesh Bank
-
         <br>
-
         <span class="highlight">
           Software Engineer | AI Researcher | FinTech Systems Developer
         </span>
-
       </p>
 
-      <a class="btn" href="#research">
-        Research Interests
-      </a>
-
-      <a class="btn btn-outline" href="#publications">
-        Publications
-      </a>
-
-      <a class="btn btn-outline" href="#contact">
-        Contact Me
-      </a>
-
+      <a class="btn" href="#research">Research Interests</a>
+      <a class="btn btn-outline" href="#publications">Publications</a>
+      <a class="btn btn-outline" href="#contact">Contact Me</a>
     </div>
-
   </header>
-
-  <!-- MAIN CONTENT -->
 
   <div class="container">
 
-    <!-- ABOUT -->
-
     <section id="about">
-
       <h2>About Me</h2>
-
       <div class="card">
-
         <p>
           I am a software engineer and AI researcher with experience in
           core banking systems, financial technology, machine learning,
           deep learning, and intelligent wearable systems.
         </p>
-
         <p>
           Currently, I serve as Deputy Director (ICT) at Bangladesh Bank,
           where I work on financial technology systems and critical banking
           applications.
         </p>
-
       </div>
-
     </section>
 
-    <!-- EDUCATION -->
-
     <section id="education">
-
       <h2>Education</h2>
 
       <div class="education-grid">
-
         <div class="edu-card">
-
-          <div class="edu-degree">
-            Secondary School Certificate (SSC)
-          </div>
-
-          <div class="edu-result">
-            GPA 5.00 out of 5.00
-          </div>
-
+          <div class="edu-degree">Secondary School Certificate (SSC)</div>
+          <div class="edu-result">GPA 5.00 out of 5.00</div>
         </div>
 
         <div class="edu-card">
-
-          <div class="edu-degree">
-            Higher Secondary Certificate (HSC)
-          </div>
-
-          <div class="edu-result">
-            GPA 5.00 out of 5.00
-          </div>
-
+          <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+          <div class="edu-result">GPA 5.00 out of 5.00</div>
         </div>
 
         <div class="edu-card">
-
           <div class="edu-degree">
             Bachelor of Science in Computer Science & Engineering
           </div>
-
           <div class="edu-institute">
             Chittagong University of Engineering and Technology (CUET)
           </div>
-
         </div>
 
         <div class="edu-card">
-
           <div class="edu-degree">
             Master of Science in Computer Science & Engineering
           </div>
-
           <div class="edu-institute">
             United International University (UIU)
           </div>
-
           <div class="edu-result">
             Major: Data Science | CGPA 4.00 out of 4.00
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- RESEARCH -->
-
     <section id="research">
-
       <h2>Research Interests</h2>
 
       <div class="grid">
-
-        <div class="card">
-          Wearable AI and Pre-impact Fall Detection
-        </div>
-
-        <div class="card">
-          Machine Learning and Deep Learning
-        </div>
-
-        <div class="card">
-          Natural Language Processing
-        </div>
-
-        <div class="card">
-          FinTech, Cybersecurity, and Intelligent Systems
-        </div>
-
+        <div class="card">Wearable AI and Pre-impact Fall Detection</div>
+        <div class="card">Machine Learning and Deep Learning</div>
+        <div class="card">Natural Language Processing</div>
+        <div class="card">FinTech, Cybersecurity, and Intelligent Systems</div>
       </div>
-
     </section>
 
-    <!-- PUBLICATIONS -->
-
     <section id="publications">
-
       <h2>Publications</h2>
 
       <div class="card">
-
         <h3>
           Performance Improvement of IEEE 802.11n WLANs via
           Frame Aggregation in NS-3
         </h3>
-
-        <p class="pub-meta">
-          MMS Kowsar, S Biswas
-        </p>
-
+        <p class="pub-meta">MMS Kowsar, S Biswas</p>
         <p class="pub-meta">
           2017 International Conference on Electrical,
           Computer and Communication Engineering
         </p>
-
-        <p class="pub-meta">
-          Citations: 25 | Year: 2017
-        </p>
-
+        <p class="pub-meta">Citations: 25 | Year: 2017</p>
       </div>
 
       <br>
 
       <div class="card">
-
         <h3>
           Banglish-to-English Translation:
           Addressing Spelling Variations and Informal Script Challenges
         </h3>
-
-        <p class="pub-meta">
-          S Biswas, RH Ronok, MM Islam
-        </p>
-
+        <p class="pub-meta">S Biswas, RH Ronok, MM Islam</p>
         <p class="pub-meta">
           2025 28th International Conference on
           Computer and Information Technology
         </p>
-
-        <p class="pub-meta">
-          Year: 2025
-        </p>
-
+        <p class="pub-meta">Year: 2025</p>
       </div>
 
       <br>
 
       <div class="card">
-
         <h3>
           SABiLNet: A Sensor-Aware BiLSTM Network
           for Pre-Impact Fall Detection
         </h3>
-
-        <p class="pub-meta">
-          Manuscript in progress
-        </p>
-
+        <p class="pub-meta">Manuscript in progress</p>
         <p class="pub-meta">
           Research area: Wearable AI, IMU-based fall detection,
           deep learning
         </p>
-
       </div>
-
     </section>
 
-    <!-- GALLERY -->
-
     <section id="gallery">
-
       <h2>Gallery</h2>
 
       <div class="gallery-grid">
 
         <div class="photo-card">
-
           <img src="images/iut-2011.jpg" alt="IUT Contest">
-
           <div class="photo-content">
-
             <h3>IUT Programming Contest 2011</h3>
-
             <p>
               Participated in inter-university programming contests
               during undergraduate studies.
             </p>
-
           </div>
-
         </div>
 
         <div class="photo-card">
-
           <img src="images/iiuc-2011.jpg" alt="IIUC Contest">
-
           <div class="photo-content">
-
             <h3>IIUC Programming Contest</h3>
-
             <p>
               Competitive programming and algorithmic problem-solving
               activities with university teams.
             </p>
-
           </div>
-
         </div>
 
         <div class="photo-card">
-
           <img src="iccit.jpeg" alt="ICCIT 2025">
-
           <div class="photo-content">
-
             <h3>ICCIT 2025</h3>
-
             <p>
-              National Collegiate Programming Contest participation
-              experience at BUET.
+              Research presentation and participation experience.
             </p>
-
           </div>
+        </div>
 
+        <div class="photo-card">
+          <img src="images/cuet.jpg" alt="CUET">
+          <div class="photo-content">
+            <h3>CUET</h3>
+            <p>
+              Academic and research journey at Chittagong University
+              of Engineering and Technology.
+            </p>
+          </div>
         </div>
 
       </div>
-
     </section>
 
-    <!-- CONTACT -->
-
     <section id="contact">
-
       <h2>Contact</h2>
 
       <div class="card">
-
         <p>Email: csesauman@gmail.com</p>
-
-        <p>
-          GitHub:
-          github.com/saumanbiswas
-        </p>
-
-        <p>
-          LinkedIn:
-          Add your LinkedIn profile link here
-        </p>
-
-        <p>
-          Google Scholar:
-          Add your Google Scholar profile link here
-        </p>
-
+        <p>GitHub: github.com/saumanbiswas</p>
+        <p>LinkedIn: Add your LinkedIn profile link here</p>
+        <p>Google Scholar: Add your Google Scholar profile link here</p>
       </div>
-
     </section>
 
   </div>
-
-  <!-- FOOTER -->
 
   <footer>
     © 2026 Sauman Biswas. All rights reserved.
   </footer>
 
 </body>
-
 </html>
