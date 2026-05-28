@@ -6,7 +6,6 @@
   <title>Sauman Biswas</title>
 
   <style>
-    
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -33,6 +32,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       z-index: 1000;
       border-bottom: 1px solid rgba(148, 163, 184, 0.08);
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
@@ -224,7 +224,6 @@
       margin-bottom: 6px;
     }
 
-    /* Gallery fixed */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -234,6 +233,8 @@
     .photo-card {
       overflow: hidden;
       border: 2px solid rgba(96, 165, 250, 0.30);
+      display: flex;
+      flex-direction: column;
     }
 
     .photo-card img {
@@ -246,6 +247,7 @@
 
     .photo-content {
       padding: 18px;
+      flex-grow: 1;
     }
 
     .photo-content h3 {
@@ -340,7 +342,8 @@
         </span>
       </p>
 
-      <a class="btn" href="#research">Research Interests</a>
+      <a class="btn" href="#projects">Projects</a>
+      <a class="btn btn-outline" href="#research">Research Interests</a>
       <a class="btn btn-outline" href="#publications">Publications</a>
       <a class="btn btn-outline" href="#contact">Contact Me</a>
     </div>
@@ -350,12 +353,14 @@
 
     <section id="about">
       <h2>About Me</h2>
+
       <div class="card">
         <p>
           I am a software engineer and AI researcher with experience in
           core banking systems, financial technology, machine learning,
           deep learning, and intelligent wearable systems.
         </p>
+
         <p>
           Currently, I serve as Deputy Director (ICT) at Bangladesh Bank,
           where I work on financial technology systems and critical banking
@@ -368,6 +373,7 @@
       <h2>Education</h2>
 
       <div class="education-grid">
+
         <div class="edu-card">
           <div class="edu-degree">Secondary School Certificate (SSC)</div>
           <div class="edu-result">GPA 5.00 out of 5.00</div>
@@ -398,52 +404,40 @@
             Major: Data Science | CGPA 4.00 out of 4.00
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
 
-<section id="projects">
+      <div class="grid">
 
-  <h2>Projects</h2>
+        <div class="card">
+          <h3>Core Banking System (CBS) for Bangladesh Bank</h3>
 
-  <div class="grid">
+          <p>
+            Worked as one of the core software developers in the development
+            and maintenance of the Core Banking System (CBS) for Bangladesh Bank.
+            The system supports critical banking operations, financial transactions,
+            settlement processes, and central banking functionalities.
+          </p>
+        </div>
 
-    <div class="card">
+        <div class="card">
+          <h3>Treasury Management System (TMS) of Bangladesh Bank</h3>
 
-      <h3>
-        Core Banking System (CBS) for Bangladesh Bank
-      </h3>
+          <p>
+            Contributed as one of the core software developers in the design,
+            development, and maintenance of the Treasury Management System (TMS).
+            The platform supports treasury operations, government securities,
+            foreign exchange transactions, settlements, reporting, and other
+            important financial workflows.
+          </p>
+        </div>
 
-      <p>
-        Worked as one of the core software developers in the
-        development and maintenance of the Core Banking System
-        (CBS) for Bangladesh Bank. The system supports critical
-        banking operations, financial transactions, and central
-        banking functionalities.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>
-        Treasury Management System (TMS) of Bangladesh Bank
-      </h3>
-
-      <p>
-        Contributed as a core software developer in the design,
-        development, and maintenance of the Treasury Management
-        System (TMS). The platform manages treasury operations,
-        government securities, foreign exchange transactions,
-        settlements, and financial reporting functionalities.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
+      </div>
+    </section>
 
     <section id="research">
       <h2>Research Interests</h2>
@@ -464,11 +458,14 @@
           Performance Improvement of IEEE 802.11n WLANs via
           Frame Aggregation in NS-3
         </h3>
+
         <p class="pub-meta">MMS Kowsar, S Biswas</p>
+
         <p class="pub-meta">
           2017 International Conference on Electrical,
           Computer and Communication Engineering
         </p>
+
         <p class="pub-meta">Citations: 25 | Year: 2017</p>
       </div>
 
@@ -479,11 +476,14 @@
           Banglish-to-English Translation:
           Addressing Spelling Variations and Informal Script Challenges
         </h3>
+
         <p class="pub-meta">S Biswas, RH Ronok, MM Islam</p>
+
         <p class="pub-meta">
           2025 28th International Conference on
           Computer and Information Technology
         </p>
+
         <p class="pub-meta">Year: 2025</p>
       </div>
 
@@ -494,7 +494,9 @@
           SABiLNet: A Sensor-Aware BiLSTM Network
           for Pre-Impact Fall Detection
         </h3>
+
         <p class="pub-meta">Manuscript in progress</p>
+
         <p class="pub-meta">
           Research area: Wearable AI, IMU-based fall detection,
           deep learning
@@ -505,30 +507,27 @@
     <section id="gallery">
       <h2>Gallery</h2>
 
-      
       <div class="gallery-grid">
 
-<div class="photo-card">
+        <div class="photo-card">
+          <img src="promotion.jpeg" alt="Promotion">
 
-  <img src="promotion.jpeg" alt="Promotion">
+          <div class="photo-content">
+            <h3>Promotion to Deputy Director (ICT)</h3>
 
-  <div class="photo-content">
-
-    <h3>Promotion to Deputy Director (ICT)</h3>
-
-    <p>
-      Promoted from Assistant Director (ICT) to Deputy Director (ICT)
-      at Bangladesh Bank on February 01, 2026.
-    </p>
-
-  </div>
-
-</div>
+            <p>
+              Promoted from Assistant Director (ICT) to Deputy Director (ICT)
+              at Bangladesh Bank on February 01, 2026.
+            </p>
+          </div>
+        </div>
 
         <div class="photo-card">
           <img src="images/iiuc-2011.jpg" alt="IIUC Contest">
+
           <div class="photo-content">
             <h3>IIUC Programming Contest</h3>
+
             <p>
               Competitive programming and algorithmic problem-solving
               activities with university teams.
@@ -538,18 +537,22 @@
 
         <div class="photo-card">
           <img src="iccit.jpeg" alt="ICCIT 2025">
+
           <div class="photo-content">
             <h3>ICCIT 2025</h3>
+
             <p>
-              Research presentation and participation experience.
+              Presented research work at ICCIT 2025.
             </p>
           </div>
         </div>
 
         <div class="photo-card">
           <img src="images/cuet.jpg" alt="CUET">
+
           <div class="photo-content">
             <h3>CUET</h3>
+
             <p>
               Academic and research journey at Chittagong University
               of Engineering and Technology.
